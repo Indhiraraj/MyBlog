@@ -75,6 +75,6 @@ app.get("/contacts",function(req,res){
     res.render("contacts")
 })
 
-app.listen(3000,function(){
+app.listen(process.env.PORT||3000,function(){
     console.log("server starts at port 3000")
 })
