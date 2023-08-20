@@ -1,0 +1,36 @@
+<%- include('partials/header'); -%>
+<div class="container">
+<h1>Contact Me!</h1>
+<div class="contact">
+    <form class="contact-form" action="https://formsubmit.co/c045c650f6468a40f711e0d8f065d5b9" method="post" enctype="text/plain" autocomplete="off">
+    <div class="row">
+        <div class="input-group">
+            <input type="text" id="name" name="name" required
+                                   value="">
+            <label style="margin-left: 10px;"  for="name"><i class="fa-solid fa-user fa-3xs"></i> Your Name</label>
+        </div>
+    
+        <div class="input-group">
+            <input name="Number" id="number" type="text" required>
+            <label style="margin-left: 10px;" for="number"><i class="fa-solid fa-phone fa-3xs"></i> Phone No.</label>
+        </div>
+    </div>
+    
+
+    <div class="input-group">
+        <input name="Email-id" id="email" type="email" required>
+        <label  for="email"><i class="fa-solid fa-envelope fa-3xs"></i> Email-id</label>
+    </div>
+
+    <div class="input-group">
+        <textarea name="message" id="message" rows="8" required></textarea>
+        <label  for="message"><i class="fa-solid fa-message fa-3xs"></i> Your Message</label>
+    </div>
+    
+    <button class="contact-btn" type="submit">SUBMIT <i class="fas fa-paper-plane"></i></button>
+
+</form>
+</div>
+</div>
+
+<%- include('partials/footer'); -%>
