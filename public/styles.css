@@ -1,130 +1,145 @@
-body{
-    width: 100%;
-    
-    margin: 0;
-    height: 80%;
+body {
+  width: 100%;
+
+  margin: 0;
+  height: 100%;
 }
 
 html {
-    margin: 0;
-    height: 100%;
+  margin: 0;
+  height: 100%;
 }
 
-.postLink{
-    color: black;
-    text-decoration: none;
+.postLink {
+  color: black;
+  text-decoration: none;
 }
 
-.container{
-    padding-top: 1.6%;
-    padding-bottom: 1.6%;
-    width: 100%;
-   
+.container {
+  padding-top: 1.6%;
+  padding-bottom: 1.6%;
+  width: 100%;
+
 }
 
-.navbar{
-    letter-spacing: 5px;
+.navbar {
+  letter-spacing: 5px;
 }
 
-.footer{
+.footer {
 
-    width: 100%;
-    height: 60px;
-    text-align: center;
-    background-color:rgb(31, 134, 134);
+  width: 100%;
+  height: 80px;
+  text-align: center;
+  align-items: center;
+  background-color: rgb(31, 134, 134);
 }
 
 .wrapper {
-    min-height: 100%;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 
-.footer-p{
-    padding-top: 15px;
-    
-    color: #fff;
+.footer-p {
+  padding-top: 25px;
+
+  color: #fff;
 }
 
 .contact {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 3.2%;
-  }
-  
-  .contact-form {
-    width: 90%;
-    max-width: 600px;
-  }
-  
-  /* Input group styling */
-  .input-group {
-    margin-bottom: 30px;
-    
-  }
-  
-  .input-group input, .input-group textarea {
-    width: 100%;
-    padding: 10px;
-    outline: 0;
-    border: 1px solid #0f0f0f;
-    border-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    color: #0f0f0f;
-    background: transparent;
-    font-size: 15px;
-  }
-
-  .input-group:not(.has-validation)>:not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating) {
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 3.2%;
 }
-  
-  .input-group label {
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    padding: 10px;
-    color: #0f0f0f;
-    cursor: text;  
-    transition: 0.12s ease-in-out;
-  }
-  
-  /* Contact button styling */
-  .contact-btn {
-    padding: 10px;
-    border: 1px solid #0f0f0f;
-    border-radius: 10px;
-    color: #0f0f0f;
-    outline: none;
-    background: transparent;
-    
-  
-    width: 100%;
-    cursor: pointer;
-  }
-  
-  /* Label animation */
-  .input-group input:focus~label, .input-group input:valid~label,
-   .input-group textarea:focus~label, .input-group textarea:valid~label {
-    top: -35px;
-    font-size: 14px;
-  }
-  
-  /* Row layout */
-  .row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .row .input-group {
-    flex-basis: 49%;
-  }
 
+.contact-form {
+  width: 90%;
+  max-width: 600px;
+}
+
+/* Input group styling */
+.input-group {
+  margin-bottom: 30px;
+
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 10px;
+  outline: 0;
+  border: 1px solid #0f0f0f;
+  border-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: #0f0f0f;
+  background: transparent;
+  font-size: 15px;
+}
+
+.input-group:not(.has-validation)>:not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating) {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.input-group label {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 10px;
+  color: #0f0f0f;
+  cursor: text;
+  transition: 0.12s ease-in-out;
+}
+
+/* Contact button styling */
+.contact-btn {
+  padding: 10px;
+  border: 1px solid #0f0f0f;
+  border-radius: 10px;
+  color: #0f0f0f;
+  outline: none;
+  background: transparent;
+
+
+  width: 100%;
+  cursor: pointer;
+}
+
+/* Label animation */
+.input-group input:focus~label,
+.input-group input:valid~label,
+.input-group textarea:focus~label,
+.input-group textarea:valid~label {
+  top: -35px;
+  font-size: 14px;
+}
+
+/* Row layout */
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.row .input-group {
+  flex-basis: 49%;
+}
+
+.about {
+  padding: 10px;
+  /* display: flex; */
+  align-items: start;
+  justify-content: space-evenly;
+  
+}
+
+.about p,h1,h2{
+padding: 10px;
+}
