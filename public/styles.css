@@ -1,14 +1,12 @@
 body {
-  width: 100%;
-
+ 
   margin: 0;
-  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-html {
-  margin: 0;
-  height: 100%;
-}
+
+
 
 .postLink {
   color: black;
@@ -19,6 +17,7 @@ html {
   padding-top: 1.6%;
   padding-bottom: 1.6%;
   width: 100%;
+  
 
 }
 
@@ -36,7 +35,8 @@ html {
 }
 
 .wrapper {
-  min-height: 100%;
+  min-height: 80vh;
+  /* min-height: 100%; */
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
