@@ -23,7 +23,8 @@ app.get("/", function (req, res) {
 
     //res.render("header",{pageTitle: title});
 
-    res.render("home", { posts: posts })
+    // res.render("home", { posts: posts })
+    res.send("test");
 })
 
 
