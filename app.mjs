@@ -4,11 +4,17 @@ import bodyParser from "body-parser";
 
 import _ from "lodash";
 
+import getPosts from "./getAllPosts.js";
+
 
 
 const app = express();
 
-const posts = [];
+
+
+let posts = [];
+
+
 
 
 
@@ -19,7 +25,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static("public"))
 
-app.get("/", function (req, res) {
+app.get("/", async function (req, res) {
+
+    const postsJson = await getPosts();
+    posts = JSON.parse(postsJson);
 
     //res.render("header",{pageTitle: title});
 
@@ -32,9 +41,10 @@ app.post("/", function (req, res) {
 })
 
 app.get("/posts/:id", function (req, res) {
-    console.log(req.params);
 
     posts.forEach(element => {
+        console.log("loop entered");
+        console.log(_.lowerCase(element.title) === _.lowerCase(req.params.id));
         if (_.lowerCase(element.title) === _.lowerCase(req.params.id)) {
             res.render("post", { title: element.title, body: element.content })
         } else {
@@ -42,9 +52,6 @@ app.get("/posts/:id", function (req, res) {
         }
 
     });
-
-
-
 
 
 })
@@ -61,7 +68,7 @@ app.post("/compose", function (req, res) {
         "title": req.body.postTitle,
         "content": req.body.postBody
     }
-    posts.push(post)
+
     res.redirect("/")
 
 })
