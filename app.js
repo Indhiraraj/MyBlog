@@ -4,7 +4,7 @@ import bodyParser from "body-parser";
 
 import _ from "lodash";
 
-// import getPosts from "./getAllPosts.js";
+import getPosts from "./getAllPosts.js";
 
 
 
@@ -27,21 +27,11 @@ app.use(express.static("public"))
 
 app.get("/", async function (req, res) {
 
-    const getPostsModule = import("./getAllPosts.js");
-
-getPostsModule.then(async ({ default: getPosts }) => {
-  // Now you can use getPosts as you would normally
-  const postsJson = await getPosts();
-  posts = JSON.parse(postsJson);
-}).catch(error => {
-  // Handle any potential errors during import
-  posts=[];
-  console.error("Error importing getPosts module:", error);
-  
-});
 
 
-   
+
+const postsJson = await getPosts();
+posts = JSON.parse(postsJson);
 
     //res.render("header",{pageTitle: title});
 
