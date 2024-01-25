@@ -43,8 +43,7 @@ app.post("/", function (req, res) {
 app.get("/posts/:id", function (req, res) {
 
     posts.forEach(element => {
-        console.log("loop entered");
-        console.log(_.lowerCase(element.title) === _.lowerCase(req.params.id));
+        
         if (_.lowerCase(element.title) === _.lowerCase(req.params.id)) {
             res.render("post", { title: element.title, body: element.content })
         } else {
