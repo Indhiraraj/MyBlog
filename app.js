@@ -38,7 +38,7 @@ posts = JSON.parse(postsJson);
 
     //res.render("header",{pageTitle: title});
 
-    res.render("home.ejs", { posts: posts })
+    res.render("home", { posts: posts })
 })
 
 
