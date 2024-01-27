@@ -4,7 +4,7 @@ import bodyParser from "body-parser";
 
 import _ from "lodash";
 
-import getPosts from "./getAllPosts";
+import getPosts from "./getAllPosts.js";
 
 
 
@@ -25,7 +25,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static("public"))
 
-
+app.set("views", "./views");
 
 
 app.get("/", async function (req, res) {
@@ -38,8 +38,7 @@ posts = JSON.parse(postsJson);
 
     //res.render("header",{pageTitle: title});
 
-    // res.render("home", { posts: posts })
-    res.json({message : "test"})
+    res.render("home", { posts: posts })
 })
 
 
