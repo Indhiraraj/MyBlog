@@ -6,8 +6,8 @@ import _ from "lodash";
 
 import getPosts from "./getAllPosts.js";
 
-
-
+function App()
+{
 const app = express();
 
 
@@ -89,3 +89,7 @@ app.get("/contacts", function (req, res) {
 app.listen(process.env.PORT || 3000, function () {
     console.log("server starts at port 3000")
 })
+
+}
+
+export default App;
