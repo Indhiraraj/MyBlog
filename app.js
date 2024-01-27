@@ -30,7 +30,7 @@ app.set("views", "./views");
 
 app.get("/", async function (req, res) {
 
-res.json("hi");
+res.json({message : "hi"});
 
 
 // const postsJson = await getPosts();
