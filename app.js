@@ -30,15 +30,15 @@ app.set("views", "./views");
 
 app.get("/", async function (req, res) {
 
+res.json("hi");
 
 
+// const postsJson = await getPosts();
+// posts = JSON.parse(postsJson);
 
-const postsJson = await getPosts();
-posts = JSON.parse(postsJson);
+//     //res.render("header",{pageTitle: title});
 
-    //res.render("header",{pageTitle: title});
-
-    res.render("home", { posts: posts })
+//     res.render("home", { posts: posts })
 })
 
 
