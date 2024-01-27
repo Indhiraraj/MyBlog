@@ -4,7 +4,7 @@ import bodyParser from "body-parser";
 
 import _ from "lodash";
 
-import getPosts from "./getAllPosts.js";
+import getPosts from "../getAllPosts.js";
 
 
 
