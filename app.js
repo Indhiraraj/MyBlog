@@ -4,10 +4,10 @@ import bodyParser from "body-parser";
 
 import _ from "lodash";
 
-import getPosts from "./getAllPosts.js";
+import getPosts from "../getAllPosts.js";
 
-function App()
-{
+
+
 const app = express();
 
 
@@ -30,15 +30,15 @@ app.set("views", "./views");
 
 app.get("/", async function (req, res) {
 
-res.json({message : "hi"});
 
 
-// const postsJson = await getPosts();
-// posts = JSON.parse(postsJson);
 
-//     //res.render("header",{pageTitle: title});
+const postsJson = await getPosts();
+posts = JSON.parse(postsJson);
 
-//     res.render("home", { posts: posts })
+    //res.render("header",{pageTitle: title});
+
+    res.render("home", { posts: posts })
 })
 
 
@@ -88,11 +88,4 @@ app.get("/contacts", function (req, res) {
 
 app.listen(process.env.PORT || 3000, function () {
     console.log("server starts at port 3000")
-    console.log(process.env.PORT);
 })
-
-}
-
-App()
-
-export default App;
