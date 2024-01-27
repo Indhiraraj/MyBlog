@@ -88,6 +88,7 @@ app.get("/contacts", function (req, res) {
 
 app.listen(process.env.PORT || 3000, function () {
     console.log("server starts at port 3000")
+    console.log(process.env.PORT);
 })
 
 }
