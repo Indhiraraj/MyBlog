@@ -25,7 +25,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static("public"))
 
-app.set("views", "./views");
+// app.set("views", "./views");
+app.use(ejs);
 
 
 app.get("/", async function (req, res) {
