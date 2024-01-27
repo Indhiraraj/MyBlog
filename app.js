@@ -25,8 +25,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static("public"))
 
-// app.set("views", "./views");
-app.use(ejs);
+
 
 
 app.get("/", async function (req, res) {
@@ -39,7 +38,8 @@ posts = JSON.parse(postsJson);
 
     //res.render("header",{pageTitle: title});
 
-    res.render("home", { posts: posts })
+    // res.render("home", { posts: posts })
+    res.json({message : "test"})
 })
 
 
